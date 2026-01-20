@@ -11,7 +11,7 @@
 .ssh/
 Applications/
 Desktop/
-Documents/
+Documents/*
 Downloads/
 Library/
 Movies/
@@ -19,3 +19,9 @@ Music/
 Pictures/
 Public/
 .*
+*.o
+\#*#
+*#
+.#*
+.*~
+*~

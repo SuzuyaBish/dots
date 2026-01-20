@@ -1,0 +1,35 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space s g": "pane::DeploySearch",
+      "space b o": "pane::CloseOtherItems",
+      "space b d": "pane::CloseActiveItem",
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "g h": "pane::ActivatePreviousItem",
+      "g l": "pane::ActivateNextItem",
+      "s v": "workspace::NewFileSplitVertical",
+      "s s": "workspace::NewFileSplitHorizontal",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "k j": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "k j": "vim::NormalBefore",
+    },
+  },
+]

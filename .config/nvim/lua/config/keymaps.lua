@@ -1,7 +1,8 @@
 local map = vim.keymap.set
-local vscode = require("vscode")
 
 if vim.g.vscode then
+  local vscode = require("vscode")
+
   map({ "n" }, "<leader>bo", function()
     vscode.action("workbench.action.closeOtherEditors")
   end)

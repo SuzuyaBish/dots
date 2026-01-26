@@ -1,4 +1,5 @@
 {
+	"explorer.compactFolders": false,
 	"workbench.startupEditor": "none",
 	"biome.suggestInstallingGlobally": true,
 	"workbench.productIconTheme": "icons-carbon",
@@ -80,8 +81,9 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"git.postCommitCommand": "push",
 	"workbench.activityBar.orientation": "vertical",
+	"workbench.colorTheme": "Vague",
+	"editor.tabSize": 2,
 	"extensions.experimental.affinity": {
 		"asvetliakov.vscode-neovim": 1
-	},
-	"workbench.colorTheme": "Vague"
+	}
 }

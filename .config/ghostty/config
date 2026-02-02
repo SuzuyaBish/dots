@@ -5,4 +5,5 @@ font-thicken
 adjust-cell-height = 4
 
 theme = Vague
+macos-titlebar-style = hidden
 

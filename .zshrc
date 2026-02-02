@@ -17,6 +17,8 @@ alias ls="eza -la"
 alias cat="bat"
 alias cl="clear"
 alias zj="zellij"
+alias zoding="zellij action new-tab -l ~/.config/zellij/layouts/layout.kdl"
+alias coding="zellij --layout ~/.config/zellij/layouts/layout.kdl"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  

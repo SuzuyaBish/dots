@@ -1,7 +1,27 @@
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.json" },
-  callback = function()
-    vim.lsp.buf.code_action({ context = { only = { "source.fixAll.biome" } }, apply = true })
-    vim.lsp.buf.code_action({ context = { only = { "source.organizeImports.biome" } }, apply = true })
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.json" },
+--   callback = LazyVim.lsp.action["source.organizeImports.biome"],
+--
+--   -- vim.lsp.buf.code_action({
+--   --   apply = true,
+--   --   context = { only = { "source.fixAll.biome" }, diagnostics = {} },
+--   -- })
+--   -- vim.lsp.buf.code_action({
+--   --   apply = true,
+--   --   context = { only = { "source.organizeImports.biome" }, diagnostics = {} },
+--   -- })
+-- })
+--
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.json" },
+--   callback = LazyVim.lsp.action["source.fixAll.biome"],
+--
+--   -- vim.lsp.buf.code_action({
+--   --   apply = true,
+--   --   context = { only = { "source.fixAll.biome" }, diagnostics = {} },
+--   -- })
+--   -- vim.lsp.buf.code_action({
+--   --   apply = true,
+--   --   context = { only = { "source.organizeImports.biome" }, diagnostics = {} },
+--   -- })
+-- })

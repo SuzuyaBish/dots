@@ -29,4 +29,8 @@ else
   -- Normal
   map({ "n" }, "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Tab", silent = true })
   map({ "n" }, "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous Tab", silent = true })
+  map("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
+  map("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", {})
+  map("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", {})
+  map("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", {})
 end

@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_line_height": {
+    "custom": 1.6180000305175781
+  },
   "prettier": {
     "allowed": true,
     "plugins": [
@@ -28,7 +31,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Vague",
+    "dark": "VSCode Dark Modern",
   },
   "languages": {
     "JSON": {

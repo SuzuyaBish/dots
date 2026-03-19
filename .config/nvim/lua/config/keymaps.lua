@@ -23,12 +23,11 @@ if vim.g.vscode then
     vscode.action("workbench.action.closeActiveEditor")
   end)
 else
-  -- Insert & Visual
   map({ "v", "i" }, "kj", "<Esc>", { desc = "Escape", silent = true })
 
-  -- Normal
   map({ "n" }, "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Tab", silent = true })
   map({ "n" }, "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous Tab", silent = true })
+
   map("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
   map("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", {})
   map("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", {})

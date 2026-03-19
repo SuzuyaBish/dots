@@ -60,6 +60,6 @@
 		"*.s3db": "${capture}.${extname}-*"
 	},
 	"typescript.updateImportsOnFileMove.enabled": "always",
-	"workbench.colorTheme": "Default Dark Modern",
+	"workbench.colorTheme": "Kanso Zen",
 	"javascript.updateImportsOnFileMove.enabled": "always"
 }

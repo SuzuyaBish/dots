@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml" # starship
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 
@@ -12,17 +12,25 @@ bup() {
   brew cleanup
 }
 
-minio-server-start() {
-  minio server ~/Documents/personal/minio/data --license ~/Documents/personal/minio/minio.license
-}
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+export FZF_DEFAULT_OPTS="--height 50% --layout=default --border --color=hl:#2dd4bf"
+
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --icons=always --tree --color=always {} | head -200'"
+
+export FZF_TMUX_OPTS=" -p90%,70% "  
 
 alias cd="z"
-alias ls="eza -la"
+alias ls="eza -la --no-user --no-filesize"
 alias cat="bat"
 alias cl="clear"
-alias zj="zellij"
-alias zoding="zellij action new-tab -l ~/.config/zellij/layouts/layout.kdl"
-alias coding="zellij --layout ~/.config/zellij/layouts/layout.kdl"
+alias lg="lazygit"
+
+alias nlof="~/scripts/fzf_listoldfiles.sh"
+alias fman="compgen -c | fzf | xargs man"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
@@ -35,6 +43,15 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 eval "$(zoxide init zsh)"
 
+if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
+      "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
+    zle -N zle-keymap-select "";
+fi
+
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)" 
+source ~/scripts/fzf-git.sh
+
 # bun completions
 [ -s "/Users/jay/.bun/_bun" ] && source "/Users/jay/.bun/_bun"
 
@@ -43,5 +60,3 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-export MINIO_ROOT_USER="WixIsGreasy"
-export MINIO_ROOT_PASSWORD="sB3roWkgw2m9"

@@ -1,3 +1,7 @@
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
 font-family = "Lilex Nerd Font"
 font-size = 15
 font-synthetic-style = "no-bold,no-italic"
@@ -26,3 +30,5 @@ foreground = #c5c9c7
 cursor-color = #c5c9c7
 selection-background = #22262D
 selection-foreground = #c5c9c7
+
+macos-titlebar-style = hidden

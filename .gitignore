@@ -31,3 +31,5 @@ node_modules/
 YTMusic_Deleter/
 bun.lock
 package.json
+.config/zed
+Keychron_Screen/

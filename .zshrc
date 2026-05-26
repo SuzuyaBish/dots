@@ -45,3 +45,6 @@ esac
 # pnpm end
 
 eval "$(zoxide init zsh)"
+
+# Added by GitButler installer
+eval "$(but completions zsh)"

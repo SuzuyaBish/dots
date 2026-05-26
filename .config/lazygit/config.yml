@@ -1,10 +1,10 @@
-customCommands:
-  - key: "c"
-    command: "cz c"
-    description: "Commit with Commitizen"
-    context: "files"
-    loadingText: "Opening Commitizen commit tool"
-    output: terminal
+# customCommands:
+#   - key: "c"
+#     command: "cz c"
+#     description: "Commit with Commitizen"
+#     context: "files"
+#     loadingText: "Opening Commitizen commit tool"
+#     output: terminal
 git:
   pagers:
     - pager: delta --dark --paging=never

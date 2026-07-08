@@ -12,11 +12,15 @@ return {
   --     })
   --   end,
   -- },
-  { "EdenEast/nightfox.nvim" },
+  {
+    "dgox16/oldworld.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "terafox",
+      colorscheme = "oldworld",
       lazy = true,
       priority = 1000,
     },

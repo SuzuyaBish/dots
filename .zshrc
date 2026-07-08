@@ -26,6 +26,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # bun completions
@@ -35,6 +37,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="/Users/jay/Library/pnpm"
@@ -46,5 +50,3 @@ esac
 
 eval "$(zoxide init zsh)"
 
-# Added by GitButler installer
-eval "$(but completions zsh)"

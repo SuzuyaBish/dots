@@ -1,0 +1,44 @@
+modelRoles: 
+  default: anthropic/claude-opus-5:max
+symbolPreset: unicode
+theme: 
+  dark: titanium
+setupVersion: 1
+defaultThinkingLevel: max
+hideThinkingBlock: true
+
+# Git write-gate. `bash` is exec tier and approvalMode is `yolo`, so without
+# these rules commit/push run with no gate at all. Ordered, first match wins;
+# `*` is a wildcard. Prompt/deny are enforced even under yolo, and they match a
+# tokenized compound-command segment, so `foo && git commit ...` is still caught.
+bash:
+  patterns:
+    # Publishing and history rewrites — never without an explicit go-ahead.
+    - match: "git push*"
+      approval: prompt
+    - match: "git commit*"
+      approval: prompt
+    - match: "git cherry-pick*"
+      approval: prompt
+    - match: "git reset --hard*"
+      approval: prompt
+    - match: "git rebase*"
+      approval: prompt
+    - match: "git merge*"
+      approval: prompt
+    - match: "git revert*"
+      approval: prompt
+    - match: "git branch -D*"
+      approval: prompt
+    - match: "git filter-branch*"
+      approval: prompt
+    # gh can publish and merge too.
+    - match: "gh pr create*"
+      approval: prompt
+    - match: "gh pr merge*"
+      approval: prompt
+    # Bypass evasion: --no-verify skips git hooks, -C retargets the repo.
+    - match: "*--no-verify*"
+      approval: deny
+    - match: "git -C *"
+      approval: prompt

@@ -17,6 +17,7 @@ alias ls="eza -la --no-user --no-filesize"
 alias cat="bat"
 alias cl="clear"
 alias lg="lazygit"
+alias her="herdr"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  

@@ -1,44 +1,81 @@
-modelRoles: 
+modelRoles:
   default: anthropic/claude-opus-5:max
-symbolPreset: unicode
-theme: 
-  dark: titanium
-setupVersion: 1
+symbolPreset: nerd
+theme:
+  dark: dark-rose-pine
+setupVersion: 2
 defaultThinkingLevel: max
 hideThinkingBlock: true
-
-# Git write-gate. `bash` is exec tier and approvalMode is `yolo`, so without
-# these rules commit/push run with no gate at all. Ordered, first match wins;
-# `*` is a wildcard. Prompt/deny are enforced even under yolo, and they match a
-# tokenized compound-command segment, so `foo && git commit ...` is still caught.
 bash:
   patterns:
-    # Publishing and history rewrites — never without an explicit go-ahead.
-    - match: "git push*"
-      approval: prompt
-    - match: "git commit*"
-      approval: prompt
-    - match: "git cherry-pick*"
-      approval: prompt
-    - match: "git reset --hard*"
-      approval: prompt
-    - match: "git rebase*"
-      approval: prompt
-    - match: "git merge*"
-      approval: prompt
-    - match: "git revert*"
-      approval: prompt
-    - match: "git branch -D*"
-      approval: prompt
-    - match: "git filter-branch*"
-      approval: prompt
-    # gh can publish and merge too.
-    - match: "gh pr create*"
-      approval: prompt
-    - match: "gh pr merge*"
-      approval: prompt
-    # Bypass evasion: --no-verify skips git hooks, -C retargets the repo.
+    - match: "*sh -c*git *"
+      approval: deny
+    - match: "*commit*.sh*"
+      approval: deny
+    - match: "*push*.sh*"
+      approval: deny
     - match: "*--no-verify*"
       approval: deny
-    - match: "git -C *"
+    - match: "*git push --force*"
+      approval: deny
+    - match: "*git push -f*"
+      approval: deny
+    - match: "*git reset --hard*"
+      approval: deny
+    - match: "*git filter-branch*"
+      approval: deny
+    - match: "*git commit*"
       approval: prompt
+    - match: "*git push*"
+      approval: prompt
+    - match: "*git rebase*"
+      approval: prompt
+    - match: "*git merge*"
+      approval: prompt
+    - match: "*git cherry-pick*"
+      approval: prompt
+    - match: "*git revert*"
+      approval: prompt
+    - match: "*git reset*"
+      approval: prompt
+    - match: "*git restore*"
+      approval: prompt
+    - match: "*git branch -D*"
+      approval: prompt
+    - match: "*git stash*"
+      approval: prompt
+    - match: "*git tag*"
+      approval: prompt
+    - match: "*gh pr create*"
+      approval: prompt
+    - match: "*gh pr merge*"
+      approval: prompt
+composer:
+  shape: pi
+statusLine:
+  preset: default
+  transparent: false
+  separator: powerline-thin
+  compactThinkingLevel: false
+  sessionAccent: false
+display:
+  shimmer: classic
+  smoothStreaming: true
+  showTokenUsage: false
+read:
+  renderMarkdown: true
+compaction:
+  handoffSaveToDisk: true
+speech:
+  enhanced: false
+dev:
+  autoqaConsent: granted
+startup:
+  quiet: false
+skills:
+  customDirectories:
+    - /Users/jay/Documents/personal/code/skills
+todo:
+  reminders: false
+recap:
+  enabled: false

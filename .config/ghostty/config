@@ -1,13 +1,27 @@
-theme = Carbonfox
+theme = Rose Pine
 
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
-
-font-family = "AeonikMonoProVF Nerd Font"
-font-size = 15
-font-synthetic-style = "no-bold,no-italic"
-font-thicken
-adjust-cell-height = 10
-
+window-padding-color = extend
+window-decoration = auto
+window-theme = auto
 macos-titlebar-style = hidden
+macos-window-shadow = true
+
+font-family = "Hack Nerd Font Mono"
+font-size = 15
+font-style = Medium
+font-style-bold = Bold
+font-thicken = true
+font-thicken-strength = 50
+adjust-cell-height = 30%
+adjust-underline-position = 2
+adjust-underline-thickness = 50%
+
+background-opacity = 0.80
+background-blur = 50
+
+cursor-style = block
+cursor-style-blink = true
+cursor-opacity = 0.9

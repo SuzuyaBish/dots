@@ -1,0 +1,75 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w16",
+      "custom_name": null,
+      "identity_cwd": "/Users/jay/Documents/work/Roboteur-Next",
+      "public_pane_numbers": {
+        "2": 6,
+        "3": 7,
+        "1": 2
+      },
+      "next_public_pane_number": 11,
+      "public_tab_numbers": [
+        1,
+        5
+      ],
+      "next_public_tab_number": 6,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 1
+              },
+              "second": {
+                "Pane": 2
+              }
+            }
+          },
+          "panes": {
+            "1": {
+              "cwd": "/Users/jay/Documents/work/Roboteur-Next",
+              "agent_session": {
+                "source": "herdr:omp",
+                "agent": "omp",
+                "kind": "path",
+                "value": "/Users/jay/.omp/agent/sessions/-Documents-work-Roboteur-Next/2026-09-10T06-56-05-515Z_01a08a1a-298b-71b6-9e5b-233d1fc0f61b.jsonl"
+              }
+            },
+            "2": {
+              "cwd": "/Users/jay/Documents/work/Roboteur-Next"
+            }
+          },
+          "zoomed": true,
+          "focused": 1,
+          "root_pane": 1
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 3
+          },
+          "panes": {
+            "3": {
+              "cwd": "/Users/jay/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 3,
+          "root_pane": 3
+        }
+      ],
+      "active_tab": 1
+    }
+  ],
+  "active": 0,
+  "selected": 0,
+  "sidebar_width": null,
+  "sidebar_section_split": null,
+  "collapsed_space_keys": []
+}
